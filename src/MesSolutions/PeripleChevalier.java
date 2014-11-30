@@ -2,12 +2,8 @@ package MesSolutions;
 
 import solver.Solver;
 import solver.constraints.ICF;
-import solver.constraints.LCF;
-import solver.constraints.SatFactory;
-import solver.variables.IntVar;
 import solver.variables.VF;
 import solver.variables.BoolVar;
-import util.objects.setDataStructures.SetFactory;
 
 
 
@@ -51,8 +47,8 @@ public class PeripleChevalier {
 		
 		solveur.post(ICF.minimum(P1, SaN, MaS));
 		
-		BoolVar[] sa ={SaN, SaS};
-		BoolVar[] ma ={MaN, MaS};
+		//BoolVar[] sa ={SaN, SaS};
+		//BoolVar[] ma ={MaN, MaS};
 		
 		//BoolVar[] setm = {(BoolVar) LCF.or(sa),(BoolVar) LCF.or(ma)};
 		//solveur.post(ICF.arithm(P1, "=", (BoolVar)LCF.and(setm)));
