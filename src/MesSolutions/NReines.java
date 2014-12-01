@@ -2,7 +2,6 @@ package MesSolutions;
 
 import solver.Solver;
 import solver.constraints.ICF;
-import solver.variables.BoolVar;
 import solver.variables.IntVar;
 import solver.variables.VF;
 
