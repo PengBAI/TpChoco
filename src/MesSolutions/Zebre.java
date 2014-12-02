@@ -1,7 +1,6 @@
 package MesSolutions;
 
 import solver.Solver;
-import solver.constraints.Constraint;
 import solver.constraints.ICF;
 import solver.constraints.LCF;
 import solver.variables.IntVar;
@@ -90,12 +89,10 @@ public class Zebre {
 		ZebreSol.post(ICF.arithm(japonais, "=", cravens));
 		ZebreSol.post(ICF.arithm(oldGolds, "=", escargot));
 		ZebreSol.post(ICF.arithm(gitanes, "=", vin));
-		Constraint[] voisin1 = {ICF.arithm(chesterﬁelds, "-", renard, "=", 1),
-								ICF.arithm(renard, "-", chesterﬁelds, "=", 1)};
-		ZebreSol.post(LCF.or(voisin1));
-		Constraint[] voisin2 = {ICF.arithm(kools, "-", cheval, "=", 1),
-								ICF.arithm(cheval, "-", kools, "=", 1)};
-		ZebreSol.post(LCF.or(voisin2));
+		ZebreSol.post(LCF.or(ICF.arithm(chesterﬁelds, "-", renard, "=", 1),
+				ICF.arithm(renard, "-", chesterﬁelds, "=", 1)));
+		ZebreSol.post(LCF.or(ICF.arithm(kools, "-", cheval, "=", 1),
+				ICF.arithm(cheval, "-", kools, "=", 1)));
 		
 		// Résolution et affichage des résultats
 

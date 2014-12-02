@@ -52,9 +52,8 @@ public class UnCbarChoco3 {
 		for (int i=0;i<n;i++)
 			for (int j=0;j<n;j++)
 				if (i!=j){
-					BoolVar[] cnts = {ICF.arithm(C[j],"-",C[i],">=",p[j]).reif(), 
-							ICF.arithm(C[i],"-",C[j],">=",p[i]).reif()};
-					UnCbarSolv.post(LCF.or(cnts) ) ;
+					UnCbarSolv.post(LCF.or(ICF.arithm(C[j],"-",C[i],">=",p[j]).reif(), 
+							ICF.arithm(C[i],"-",C[j],">=",p[i]).reif()) ) ;
 				}
 
 		

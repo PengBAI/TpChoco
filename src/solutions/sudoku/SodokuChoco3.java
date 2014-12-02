@@ -15,7 +15,7 @@ public class SodokuChoco3 {
 		
 	    int[][] FondDeGrille;  
 
-		LecteurFichierSodoku monlecteurdefichier = new LecteurFichierSodoku("Sodoku4.txt");
+		LecteurFichierSodoku monlecteurdefichier = new LecteurFichierSodoku("src/MesSolutions/sodoku/Sodoku2.txt");
 	    monlecteurdefichier.convert();
 	    FondDeGrille = monlecteurdefichier.GetGrille();
 	    
@@ -28,7 +28,8 @@ public class SodokuChoco3 {
 	    	for (int j=0;j<9;j++){
 	    		if (FondDeGrille[i][j]==0)
 					Cases[i][j] = VF.enumerated("Case_" + i + "_" + j, 1, 9,SodokuSolv);
-				else Cases[i][j] = VF.fixed("Case_" + i + "_" + j, FondDeGrille[i][j],SodokuSolv);
+				else 
+					Cases[i][j] = VF.fixed("Case_" + i + "_" + j, FondDeGrille[i][j],SodokuSolv);
 	    	}
 	    }
 

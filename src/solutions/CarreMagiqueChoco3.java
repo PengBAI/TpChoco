@@ -2,7 +2,6 @@ package solutions;
 
 import solver.Solver;
 import solver.constraints.ICF;
-import solver.search.loop.ISearchLoop;
 import solver.search.strategy.ISF;
 import solver.variables.IntVar;
 import solver.variables.VF;
@@ -14,10 +13,9 @@ public class CarreMagiqueChoco3 {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		// Déclaration des données
-		int n = 10; // Ordre du carré magique  		
+		int n = 3; // Ordre du carré magique  		
 //		int SommeMagique = n * (n * n + 1) / 2; // Somme Magique
 		
 		// Déclaration du solveur
@@ -49,6 +47,7 @@ public class CarreMagiqueChoco3 {
 			CarreMagiqueSolv.post(ICF.sum(Cases[i], "=", SommeMagique));
 			CarreMagiqueSolv.post(ICF.sum(TranspCases[i], "=", SommeMagique));
 			}
+		
 		CarreMagiqueSolv.post(ICF.sort(Diag1, Diag1));
 		CarreMagiqueSolv.post(ICF.arithm(Diag1[0],"<", Diag2[n-1]));
 
@@ -63,7 +62,7 @@ public class CarreMagiqueChoco3 {
 		// Résolution et affichage
 		if(CarreMagiqueSolv.findSolution()) { 
 			System.out.println("Fin résolution");
-			
+			do{
 			for (int i = 0; i < n; i++) 
 			{
 				for (int j = 0; j < n; j++) 
@@ -71,6 +70,7 @@ public class CarreMagiqueChoco3 {
 				System.out.println();
 			}
 			System.out.println();
+			}while(CarreMagiqueSolv.nextSolution());
 			
 			System.out.println(CarreMagiqueSolv.getMeasures().getSolutionCount()+" solution(s) trouvée(s) en "
 				+ CarreMagiqueSolv.getMeasures().getTimeCount() + "secondes");		

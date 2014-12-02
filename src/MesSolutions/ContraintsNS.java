@@ -8,7 +8,8 @@ import solver.variables.IntVar;
 import solver.variables.VF;
 
 
-/** Problème: 1. Contraintes numériques simples
+/** 
+ * Problème: 1. Contraintes numériques simples
  * Soit le domaine D déﬁni par:
  * 1) x^2 + y^2 ≤ 4
  * 2) y ≥ x + 1 ou y ≥ −x + 1
