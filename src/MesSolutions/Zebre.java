@@ -6,7 +6,8 @@ import solver.constraints.LCF;
 import solver.variables.IntVar;
 import solver.variables.VF;
 
-/** Cinq maisons consécutives, de couleurs différentes, sont habitées 
+/** 
+ * Cinq maisons consécutives, de couleurs différentes, sont habitées 
  * par des hommes de diﬀérentes nationalités. Chacun possède un animal 
  * différent, a une boisson préférée différente et fume des cigarettes 
  * différentes. De plus, on sait que :

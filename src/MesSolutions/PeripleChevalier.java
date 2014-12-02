@@ -7,8 +7,9 @@ import solver.variables.BoolVar;
 
 
 
-/** Problème: 3. Le périple du chevalier
- *	3.1.1 Le premier choix
+/** 
+ * Problème: 3. Le périple du chevalier
+ * 3.1.1 Le premier choix
  * Le Chevalier Haje s’est égaré au fond de la forêt enchantée. 
  * Après des jours d’errance, il arrive devant un
  * chêne séculaire sur l’écorce duquel il peut lire "un de ces 

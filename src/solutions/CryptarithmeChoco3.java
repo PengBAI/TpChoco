@@ -5,12 +5,12 @@ import solver.constraints.ICF;
 import solver.variables.IntVar;
 import solver.variables.VF;
 
-//une solution unique
-//forty = 29786
-//+ ten = + 850
-//+ ten = + 850
-//-----   -----
-//sixty = 31486
+// une solution unique
+// forty = 29786
+// + ten = + 850
+// + ten = + 850
+// -----   -----
+// sixty = 31486
 // Beaucoup plus rapide en déclarant forty, ten et sixty en bounded plutôt qu'en enumerated.
 public class CryptarithmeChoco3 {
 

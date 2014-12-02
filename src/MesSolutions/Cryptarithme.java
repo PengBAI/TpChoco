@@ -6,7 +6,8 @@ import solver.variables.IntVar;
 import solver.variables.VF;
 
 
-/** Problème: 2. Cryptarithme
+/** 
+ * Problème: 2. Cryptarithme
  * e.g. : forty + ten + ten = sixty 
  * Affecter une valeur entre 0 et 9 à chaque lettre de telle 
  * sorte que l’addition soit vériﬁée et qu’une même

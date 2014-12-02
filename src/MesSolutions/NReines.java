@@ -7,7 +7,8 @@ import solver.variables.VF;
 
 
 
-/** En vous appuyant sur les transparents du cours, programmer un CSP
+/** 
+ * En vous appuyant sur les transparents du cours, programmer un CSP
  * résolvant ce problème dans le cas général (n quelconque).
  * Modéliser:
  * C_lig = {L_i != L_j | i et j ∈ {1, ..n}, et i != j}
